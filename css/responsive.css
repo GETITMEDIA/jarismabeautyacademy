@@ -1,0 +1,464 @@
+/* ============================================================
+   JARISMA BEAUTY ACADEMY – RESPONSIVE STYLES
+   Mobile-first breakpoints: 320, 375, 425, 768, 1024, 1280, 1440+
+   ============================================================ */
+
+/* ---- Max 1280px ---- */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+/* ---- Max 1024px (Tablet Landscape) ---- */
+@media (max-width: 1024px) {
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .two-col-grid {
+    gap: 30px;
+  }
+
+  .course-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience-grid {
+    gap: 30px;
+  }
+
+  .apart-grid {
+    gap: 15px;
+  }
+
+  .apart-item {
+    height: 200px;
+  }
+
+  .course-carousel-card {
+    flex: 0 0 50%;
+  }
+}
+
+/* ---- Max 921px (Astra tablet breakpoint) ---- */
+@media (max-width: 921px) {
+  html {
+    font-size: 91.2%;
+  }
+
+  /* Show hamburger, hide desktop nav */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  /* Header */
+  .header-inner {
+    min-height: 60px;
+  }
+
+  .site-header.transparent .site-logo .logo-light {
+    width: 80px;
+    max-width: 80px;
+  }
+
+  /* Hero */
+  .hero-slider {
+    height: 70vh;
+    min-height: 450px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Page banner */
+  .page-banner {
+    height: 220px;
+    margin-top: 60px;
+  }
+
+  .page-banner-content h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Two column layouts */
+  .two-col-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .two-col-img {
+    order: -1;
+  }
+
+  /* Experience section */
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Stats */
+  .stats-grid {
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  /* Apart grid */
+  .apart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tools */
+  .tools-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-main {
+    padding: 40px 0 20px;
+  }
+
+  /* Course carousel */
+  .course-carousel-card {
+    flex: 0 0 100%;
+  }
+}
+
+/* ---- Max 768px (Tablet Portrait) ---- */
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.5rem; }
+
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .hero-slider {
+    height: 65vh;
+    min-height: 400px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 14px 35px;
+    font-size: 0.9rem;
+  }
+
+  /* Gallery */
+  .gallery-filters {
+    gap: 6px;
+  }
+
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 25px 10px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  /* Map */
+  .map-section {
+    height: 300px;
+  }
+
+  /* Contact form */
+  .contact-form {
+    padding: 20px;
+  }
+
+  /* Apart grid */
+  .apart-item {
+    height: 180px;
+  }
+}
+
+/* ---- Max 544px (Astra mobile breakpoint) ---- */
+@media (max-width: 544px) {
+  html {
+    font-size: 91.2%;
+  }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.2rem; }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* ---- Max 425px (Large Phone) ---- */
+@media (max-width: 425px) {
+  .hero-slider {
+    height: 60vh;
+    min-height: 380px;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    font-size: 0.85rem;
+  }
+
+  .page-banner {
+    height: 180px;
+  }
+
+  .page-banner-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .course-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 25px 15px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .apart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apart-item {
+    height: 200px;
+  }
+
+  .experience-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-academy-name {
+    font-size: 1.1rem;
+  }
+
+  /* Contact form */
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Lightbox */
+  .lightbox-nav {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  /* Social icons in contact */
+  .social-icons {
+    justify-content: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  /* Gallery filter buttons wrap */
+  .gallery-filters {
+    gap: 5px;
+  }
+
+  .filter-btn {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+  }
+
+  /* Map */
+  .map-section {
+    height: 250px;
+  }
+
+  /* Slider dots */
+  .slider-dots {
+    bottom: 20px;
+  }
+
+  /* Back to top */
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* ---- Max 375px (Medium Phone) ---- */
+@media (max-width: 375px) {
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    padding: 11px 24px;
+    font-size: 0.8rem;
+  }
+
+  .course-card {
+    padding: 20px 15px;
+  }
+
+  .page-banner-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .two-col-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---- Max 320px (Small Phone) ---- */
+@media (max-width: 320px) {
+  .hero-slider {
+    min-height: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.25rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+  }
+
+  .nav-btn .btn {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+
+  .footer-info p {
+    font-size: 0.8rem;
+  }
+}
+
+/* ---- Min 1440px (Large Desktop) ---- */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .hero-slider {
+    max-height: 800px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.2rem;
+  }
+}
+
+/* ---- Prevent horizontal scroll globally ---- */
+html, body {
+  overflow-x: hidden;
+}
