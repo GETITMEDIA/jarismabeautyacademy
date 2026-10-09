@@ -217,4 +217,18 @@
         $('#formStatus').addClass('show');
     });
 
+
+    // Footer attribution & copyright
+    var renderFooterAttribution = function () {
+        var $copyright = $('.footer .copyright');
+        if ($copyright.length) {
+            var currentYear = new Date().getFullYear();
+            $copyright.html(
+                '<p class="mb-1">Copyright &copy; ' + currentYear + ' <a class="border-bottom" href="index.html">jarismabeautyacademy.com</a></p>' +
+                '<p class="mb-0">Proudly designed by <a class="border-bottom" href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener">Getitmedia Solutions</a></p>'
+            );
+        }
+    };
+    renderFooterAttribution();
+
 })(jQuery);
