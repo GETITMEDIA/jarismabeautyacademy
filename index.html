@@ -562,9 +562,17 @@
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top" aria-label="Back to top"><i
-            class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <!-- Back to Top with Live Percentage -->
+    <button type="button" class="back-to-top" aria-label="Back to top">
+        <svg class="progress-circle" width="56" height="56" viewBox="0 0 56 56">
+            <circle class="progress-bg" cx="28" cy="28" r="24"></circle>
+            <circle class="progress-bar" cx="28" cy="28" r="24"></circle>
+        </svg>
+        <div class="back-to-top-inner">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            <span class="scroll-percent">0%</span>
+        </div>
+    </button>
 
 
     <!-- JavaScript Libraries -->
