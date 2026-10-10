@@ -442,12 +442,13 @@ a {
 }
 
 .title h2 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: clamp(1.35rem, 1.8vw, 1.85rem);
+    line-height: 1.3;
 }
 
 @media (min-width: 1200px) {
     .title h2 {
-        font-size: 2.5rem;
+        font-size: 1.85rem;
     }
 }
 
@@ -2572,4 +2573,97 @@ body.lb-open {
     border: 1px solid rgba(212, 168, 71, 0.3);
     border-radius: 14px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Founder Showcase */
+.founder-media-showcase {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.founder-floating-pill {
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    background: rgba(18, 18, 22, 0.95);
+    border: 1px solid var(--gold);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 10px 22px 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65), 0 0 15px rgba(212, 168, 71, 0.35);
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.founder-floating-pill:hover {
+    transform: translateY(-3px);
+}
+
+.founder-floating-pill .founder-badge-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, #b8860b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.founder-floating-pill .founder-badge-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.founder-floating-pill .founder-badge-text strong {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.95rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.founder-floating-pill .founder-badge-text span {
+    font-size: 0.74rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+.founder-signature-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.35rem;
+    background: var(--ink-2);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 14px 14px 0;
+    margin-bottom: 2rem;
+}
+
+.founder-signature-card .founder-info h4 {
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.founder-signature-card .founder-info span {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    margin-top: 3px;
 }
