@@ -47,13 +47,100 @@ a {
     outline-offset: 3px;
 }
 
-/*** Floating Back-To-Top Button with Circular Progress Border (No Percentage Text) ***/
-.back-to-top {
+/*** Floating WhatsApp & Back-To-Top Buttons ***/
+.floating-whatsapp {
     position: fixed;
     right: 25px;
     bottom: 25px;
-    width: 54px;
-    height: 54px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45), 0 4px 12px rgba(0, 0, 0, 0.35);
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-3px) scale(1.08);
+    background: #20ba59;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.65), 0 6px 16px rgba(0, 0, 0, 0.45);
+    color: #ffffff !important;
+}
+
+.floating-whatsapp::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #25D366;
+    opacity: 0.8;
+    animation: whatsappPulse 2s infinite ease-out;
+    pointer-events: none;
+}
+
+@keyframes whatsappPulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}
+
+.floating-whatsapp .whatsapp-tooltip {
+    position: absolute;
+    right: calc(100% + 14px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1e1e24;
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 1px solid rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+.floating-whatsapp .whatsapp-tooltip::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1e1e24;
+}
+
+.floating-whatsapp:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(-4px);
+}
+
+.back-to-top {
+    position: fixed;
+    right: 28px;
+    bottom: 98px;
+    width: 52px;
+    height: 52px;
     border-radius: 50% !important;
     background: #141416 !important;
     border: none !important;
@@ -82,6 +169,22 @@ a {
 .back-to-top:hover {
     transform: translateY(-3px) scale(1.06);
     box-shadow: 0 12px 30px rgba(0, 0, 0, .8), 0 0 25px rgba(212, 168, 71, .55);
+}
+
+@media (max-width: 576px) {
+    .floating-whatsapp {
+        right: 18px;
+        bottom: 18px;
+        width: 54px;
+        height: 54px;
+        font-size: 30px;
+    }
+    .back-to-top {
+        right: 20px;
+        bottom: 84px;
+        width: 48px;
+        height: 48px;
+    }
 }
 
 /* SVG Circular Progress Ring */
@@ -1728,82 +1831,30 @@ body.lb-open {
     animation: fadeInError 0.3s ease;
 }
 
-/*** Map Section ***/
-.map-section {
-    background: linear-gradient(180deg, transparent 0%, rgba(13, 13, 13, 0.5) 100%);
-    position: relative;
-}
-
-.map-wrapper {
+/*** Simple Map Section ***/
+.simple-map-card {
     background: var(--ink-2);
-    border: 1px solid rgba(212, 168, 71, 0.25);
+    border: 1px solid rgba(212, 168, 71, 0.35);
     border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
-    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    transition: border-color .3s ease;
 }
 
-.map-wrapper:hover {
-    border-color: rgba(212, 168, 71, 0.5);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+.simple-map-card:hover {
+    border-color: rgba(212, 168, 71, 0.6);
 }
 
-.map-header {
-    background: rgba(13, 13, 13, 0.85);
-    border-bottom: 1px solid rgba(212, 168, 71, 0.18);
+.simple-map-header {
+    background: rgba(13, 13, 13, 0.95);
+    border-bottom: 1px solid rgba(212, 168, 71, 0.2);
 }
 
-.map-icon-box {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    background: var(--gold-soft);
-    border: 1px solid rgba(212, 168, 71, 0.35);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.map-container {
-    position: relative;
-    width: 100%;
-    min-height: 420px;
-    background: #111;
-}
-
-.map-container iframe {
+.simple-map-body iframe {
     width: 100%;
     height: 450px;
     border: none;
     display: block;
-    filter: brightness(0.96) contrast(1.04);
-}
-
-.map-info-grid {
-    background: rgba(13, 13, 13, 0.85);
-    border-top: 1px solid rgba(212, 168, 71, 0.18);
-}
-
-.map-info-item {
-    padding: 10px 14px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    transition: background-color .2s ease, border-color .2s ease;
-}
-
-.map-info-item:hover {
-    background: rgba(212, 168, 71, 0.08);
-    border-color: rgba(212, 168, 71, 0.25);
-}
-
-.text-hover-gold {
-    transition: color .2s ease;
-}
-
-.text-hover-gold:hover {
-    color: var(--gold) !important;
 }
 
 

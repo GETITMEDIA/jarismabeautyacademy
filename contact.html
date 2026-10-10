@@ -233,7 +233,7 @@
         <!-- Contact End -->
 
         <!-- Map Section Start -->
-        <div class="container-fluid py-5 map-section" id="location-map">
+        <div class="container-fluid py-5" id="location-map">
             <div class="container">
                 <div class="title text-center wow fadeInUp" data-wow-delay="0.1s">
                     <div class="title-center">
@@ -241,31 +241,24 @@
                         <h2>Our Location</h2>
                     </div>
                 </div>
-                <div class="map-wrapper wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="map-header d-flex flex-wrap align-items-center justify-content-between p-3 p-md-4">
-                        <div class="d-flex align-items-center mb-3 mb-md-0">
-                            <div class="map-icon-box me-3">
-                                <i class="fa fa-map-marker-alt text-primary fs-3" aria-hidden="true"></i>
-                            </div>
+
+                <div class="simple-map-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="simple-map-header d-flex flex-wrap align-items-center justify-content-between p-3 p-md-4">
+                        <div class="d-flex align-items-center mb-2 mb-md-0">
+                            <i class="fa fa-map-marker-alt text-primary fs-3 me-3" aria-hidden="true"></i>
                             <div>
                                 <h4 class="text-white mb-1">Jarisma International Academy</h4>
-                                <p class="text-muted mb-0 small">
-                                    <i class="fa fa-location-dot text-primary me-1" aria-hidden="true"></i>47, Dr. Ambedkar Street, Uppalam, Pondicherry - 605001
-                                </p>
+                                <p class="text-muted mb-0 small">47, Dr. Ambedkar Street, Uppalam, Pondicherry - 605001</p>
                             </div>
                         </div>
-                        <div class="map-actions d-flex flex-wrap gap-2">
+                        <div>
                             <a href="https://maps.google.com/maps?daddr=47,+Dr.+Ambedkar+Street,+Uppalam,+Puducherry+605001" 
-                               target="_blank" rel="noopener" class="btn btn-outline-primary border-2 px-3 py-2 btn-sm">
-                                <i class="fa fa-directions me-1" aria-hidden="true"></i> Get Directions
-                            </a>
-                            <a href="https://maps.google.com/?q=47,+Dr.+Ambedkar+Street,+Uppalam,+Puducherry+605001" 
-                               target="_blank" rel="noopener" class="btn btn-primary px-3 py-2 btn-sm">
-                                <i class="fa fa-external-link-alt me-1" aria-hidden="true"></i> View Larger Map
+                               target="_blank" rel="noopener" class="btn btn-primary px-4 py-2">
+                                <i class="fa fa-directions me-2" aria-hidden="true"></i>Get Directions
                             </a>
                         </div>
                     </div>
-                    <div class="map-container">
+                    <div class="simple-map-body">
                         <iframe 
                             src="https://maps.google.com/maps?q=47%2C%20Dr.%20Ambedkar%20Street%2C%20Uppalam%2C%20Puducherry%20605001&t=&z=16&ie=UTF8&iwloc=&output=embed"
                             width="100%" 
@@ -276,39 +269,6 @@
                             referrerpolicy="no-referrer-when-downgrade"
                             title="Jarisma International Academy Location Map">
                         </iframe>
-                    </div>
-                    <div class="map-info-grid row g-3 p-3 p-md-4">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="map-info-item d-flex align-items-center">
-                                <i class="fa fa-clock text-primary fs-4 me-3" aria-hidden="true"></i>
-                                <div>
-                                    <div class="text-white fw-bold small">Academy Hours</div>
-                                    <div class="text-muted small">Mon – Sat: 9:00 AM – 7:00 PM</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="map-info-item d-flex align-items-center">
-                                <i class="fa fa-phone-alt text-primary fs-4 me-3" aria-hidden="true"></i>
-                                <div>
-                                    <div class="text-white fw-bold small">Call Us Directly</div>
-                                    <div class="text-muted small">
-                                        <a href="tel:+919994338386" class="text-muted text-hover-gold">+91 99943 38386</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <div class="map-info-item d-flex align-items-center">
-                                <i class="fa fa-envelope text-primary fs-4 me-3" aria-hidden="true"></i>
-                                <div>
-                                    <div class="text-white fw-bold small">Email Admissions</div>
-                                    <div class="text-muted small text-break">
-                                        <a href="mailto:jarismainternationalacademy@gmail.com" class="text-muted text-hover-gold">jarismainternationalacademy@gmail.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -369,6 +329,16 @@
             <i class="fa fa-arrow-up" aria-hidden="true"></i>
         </div>
     </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919994338386?text=Hello%20Jarisma%20Beauty%20Academy%2C%20I%20would%20like%20to%20enquire%20about%20your%20courses." 
+       class="floating-whatsapp" 
+       target="_blank" 
+       rel="noopener" 
+       aria-label="Chat with Jarisma Academy on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="whatsapp-tooltip">Chat with Us</span>
+    </a>
 
 
     <!-- JavaScript Libraries -->
